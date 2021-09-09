@@ -69,6 +69,7 @@ console.log("---------- ---------- ---------- ---------- ----------");
     // Array slice() vs splice()
     // What is prototype
 
+
     console.log("Message a" - "Message b"); // NaN
 
     numbers = "123456" // this is 0 base
