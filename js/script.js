@@ -1,13 +1,212 @@
 console.log("---------- ---------- ---------- ---------- ----------");
 {
     //document.write("This is Internal JavaScript Example.!!!");
+
+    console.log("##### ---------- #####");
+    console.log("Testing");
+
+    var arr = ["9+1", "-5.0+-2.0", "0000.2+0.5",
+        "3.0+2", "b+c"];
+
+    for (var i = 0; i < arr.length; i++) {
+        try {
+            console.log(eval(arr[i]));
+        } catch (e) {
+            console.log("Invalid");
+        }
+    }
+
+    console.log("----------");
+
+    console.log("Hello" + " World");
+
+    console.log("----------");
+
+    var date = new Date("Thu Jan 29 2009 17:31:44");
+    var now = new Date("2019-01-24 18:31:44");
+
+    console.log(now.getMonth() === date.getMonth());
+
+    console.log("----------");
+
+    a = 8 + "8";
+    console.log(a);
+
+    console.log("----------");
+
+    console.log("Hello" - " World");
+
+    console.log("----------");
+
+    let i2 = 4;
+
+    console.log(i2!=5);
+
+    var x = function () {
+        if (i2 != 5) {
+            x = true
+        } else {
+            x = false
+        }
+    };
+    console.log(x());
+
+    console.log(function () {
+        if (i2 != 5) {
+            return true
+        } else {
+            return false
+        }
+    });
+
+    var x = function () {
+        if (i2 === 5) {
+            return true
+        } else {
+            return false
+        }
+    };
+    console.log(x());
+
+    console.log("----------");
+
+    //let name = "Per Scholas";   // Error
+    //let name = "JavaScript";    // Error
+    //console.log(name);
+
+    console.log("----------");
+
+    //alert("Hello JS!");     // Correct
+    //alertbox("Hello JS!");  // Uncaught ReferenceError: alertbox is not defined
+    //msg("Hello JS!");       // Uncaught ReferenceError: msg is not defined
+    //msgbox("Hello JS!");    // Uncaught ReferenceError: msgbox is not defined
+
+    console.log("----------");
+
+    var a = [9, 8, 7, 6, 5, 4];
+    console.log(a.splice(3));
+    console.log(a);
+
+    console.log("----------");
+
+    var x = 5;
+    var y = 6;
+    var res = eval("x*y");
+    console.log(res);
+
+    console.log("----------");
+
+    var a = "Per Scholas";
+    var x = a.lastIndexOf("l");
+    console.log(x);
+
+    console.log("----------");
+
+    var a = "Per Scholas";
+    var result = a.substring(4, 5);
+    console.log(result);
+
+    console.log("----------");
+
+    var a = [4, 8, 5, 7, 6, 9];
+    console.log(a.slice(3).sort());
+    console.log(a);
+
+    console.log("----------");
+
+    var data = "1+2, 2+3, 3+4, 4+5, 5 + 1 ".split(/\s*,\s*/).reverse();
+    console.log(data[1][0]+data[1][2]);
+
+    console.log("----------");
+
+    var arr = [1, 2, 3, 4, 5, ];
+    console.log(arr);
+    arr.forEach(function(value, index, array) {
+        array[index] = value * value
+    });
+    console.log(arr);
+    console.log(arr.reverse().filter(function(x) {
+        return x % 5
+    }));
+    console.log(arr);
+
+    console.log("----------");
+
+    numbers = "12345";
+    for (var i = 0; i < 5; i++) {
+        if (numbers[i] == 3) {
+            break;
+        }
+        console.log(numbers[i]);
+    }
+
+    console.log("----------");
+
+    var name = "Per Scholas";
+    var name = "JavaScript";
+    console.log(name);
+
+    console.log("----------");
+
+    numbers = "12345";
+    for (var i = 0; i < 5; i++) {
+        if (numbers[i] == 3) {
+            continue;
+        }
+        console.log(numbers[i]);
+    }
+
+    console.log("----------");
+
+    var person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue"
+    };
+    for (var i in person) {
+        console.log(i);
+    }
+
+    console.log("##### ---------- #####");
 }
 console.log("---------- ---------- ---------- ---------- ----------");
 {
-    let foo = new Boolean(true);
+    console.log("Basics JavaScript Day 1.a");
+
+    console.log("----------");
+    console.log("Wrappers")
+
+    let fooWrapper = new Boolean(true);
+    console.log(fooWrapper);
+    let foo = Boolean(true);
     console.log(foo);
 
+    let foo2Wrapper = new String("Hello World!");
+    console.log(foo2Wrapper);
+    let foo2 = String("Hello World!");
+    console.log(foo2);
+
+    let foo3Wrapper = new Number("ddd");
+    console.log(foo3Wrapper);
+    foo3Wrapper = 5;
+    console.log(foo3Wrapper);
+    let foo3 = Number("ddd");
+    console.log(foo3); // NaN
+    foo3 = 5;
+    console.log(foo3);
+
+    console.log("----------");
+    console.log("Operators");
+
     console.log(5 + 6);
+
+    console.log(3 > 2 && 5 > 3);
+
+    console.log((5 <= 3 || 6 > 0) && (20 % 3 == 2 && 88 / 2 > 30));
+
+    console.log("----------");
+    console.log("var, let, and const");
 
     let greeting = "say Hi";
     if (true) {
@@ -32,33 +231,164 @@ console.log("---------- ---------- ---------- ---------- ----------");
     object1.name = "Paper";
     console.log(object1.name);
 
+    console.log("----------");
+    console.log("== and ===");
+
+    console.log(3 == "3");
+    console.log(3 === "3");
+
+    console.log("----------");
+    console.log("Control Statements - if and switch");
+
+    // if statement is the same as Java
+    // switch is a little different
+
+    let x = 2;
+    switch (x) {
+        case 1:
+            console.log("case 1 here");
+            break;
+        case 2:
+            console.log("case 2 here");
+            break;
+        case 3:
+            console.log("case 3 here");
+            break;
+        default:
+            console.log("not in the 3 cases");
+            break;
+    }
+
+    console.log("----------");
+    console.log("do while loop");
+
+    let j = 1;
+    do {
+        let value = j * 2;
+        j++;
+        console.log(value);
+    } while (j <= 5);
+
+    console.log("----------");
+    console.log("Simple algorithm");
+
+    let userInput = "";
+    let operand = "";
+    let nums = "";
+    const SEPARATOR = "|";
+    //userInput = prompt("Enter an Arithmetic Expression: ");
+    //console.log(userInput);
+    userInput = "34+55+72";
+    for (let i = 0; i < userInput.length; i++) {
+        if (userInput[i] >= "0" && userInput[i] <= "9") {
+            console.log("digit here");
+            while (i < userInput.length && userInput[i] >= "0" && userInput[i] <= 9) {
+                nums += userInput[i];
+                i++;
+            }
+            nums += SEPARATOR;
+        }
+        if (userInput[i] == "+" || userInput[i] == "-" || userInput[i] == "^") {
+            console.log("operand here");
+            operand += userInput[i] + SEPARATOR;
+        }
+    }
+    console.log("numbers", nums);
+    console.log("operands", operand);
+}
+console.log("---------- ---------- ---------- ---------- ----------");
+{
+    console.log("Basics JavaScript Day 1.b");
+
+    console.log("----------");
+    console.log("Function");
+
+    function defaultMessage() {
+        console.log("Default");
+    }
+
+    function customMessage(custom, times) {
+        for (let i = 0; i < times; i++) {
+            console.log(i, custom);
+        }
+    }
+
+    customMessage("useful message", 5);
+
+    function add(a, b) {
+        let c = a + b;
+        return c;
+    }
+
+    let result = add(13, 5);
+    console.log(result);
+
+    console.log("----------");
+    console.log("Function with object");
+
+    function printProps(p) {
+        console.log(p.friends.one);
+        for (let key in p) {
+            let value = p[key];
+            console.log(key);
+            console.log(value);
+            console.log(key + ": " + value + "\n");
+        }
+    }
+
+    let person = {
+        first_name: "Luke",
+        last_name: "Lance",
+        age: 23,
+        address: "1950 N Logan",
+        friends: {
+            one: "a",
+            two: "b"
+        },
+        fullName: function () {
+            return this.first_name + " " + this.last_name;
+        }
+    };
+
+    printProps(person);
+
+    console.log("----------");
+    console.log("Variable Scope");
+
+    //var scope = "global"; // Declare scope global
+    let scope = "global";
+
+    function checkScope() {
+        //var scope = "local";
+        let scope = "local";
+        console.log("Inside function ---> " + scope); // local
+        return scope;
+    }
+
+    console.log("Outside function ---> " + scope); // global
+
+    let res = checkScope();
+    console.log("Return result ---> " + res); // local
+
+    console.log("----------");
+    console.log("Variable Scope 2");
+
+    scope2 = "global"; // Declare scope global
+
+    function checkScope2() {
+        scope2 = "local";           // Just changed the global
+        myScope2 = "local";         //Implicitly declare myScope as global var
+        return [scope2, myScope2];    // return two values
+    }
+
+    var result2 = checkScope2();
+    console.log(scope2);
+    console.log(myScope2);  // global variable value has changed
+    console.log(result2);   // global namespace cluttered.
 
 
-    // function printProps(p) {
-    //     console.log(p.friends.one);
-    //     for (var key in p) {
-    //         var value = p[key];
-    //         console.log(key + ": " + value + "\n");
-    //     }
-    // }
-    //
-    // var person = {
-    //     first_name: "Luke",
-    //     last_name: "Lance",
-    //     age: 23,
-    //     address: "1950 N Logan",
-    //     friends: {
-    //         one: "a",
-    //         two: "b"
-    //     },
-    //     fullName: function() {
-    //         return this.first_name + " " + this.last_name;
-    //     }
-    // };
-    //
-    // printProps(person);
-    //
-    // console.log("----------")
+
+    // console.log("----------");
     //
     // console.log(person.first_name);
     // console.log(person["first_name"]);
