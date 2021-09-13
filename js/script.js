@@ -126,9 +126,22 @@ console.log("---------- ---------- ---------- ---------- ----------");
     });
     console.log(arr);
     console.log(arr.reverse().filter(function(x) {
-        return x % 5
+        return x % 5 // if x % 5 equal 0, it will return false.
     }));
     console.log(arr);
+
+    console.log("----------");
+
+    var strArr = ["a", "b", "c", "d", "e"];
+    console.log(strArr);
+    console.log(strArr.filter(function (x) {
+        if (x == "c") {
+            return true;
+        } else {
+            return false;
+        }
+    }));
+    console.log(strArr);
 
     console.log("----------");
 
@@ -411,9 +424,6 @@ console.log("---------- ---------- ---------- ---------- ----------");
 {
     console.log("KBA review");
 
-    // == vs ===
-    // var vs let vs const
-    // Should we use var?
     // Do we even have to declare the type of variable
     // how to print in the same line
     // how document.write() work?
