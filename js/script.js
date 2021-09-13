@@ -4,55 +4,53 @@ console.log("---------- ---------- ---------- ---------- ----------");
 }
 console.log("---------- ---------- ---------- ---------- ----------");
 {
-
-
     let foo = new Boolean(true);
     console.log(foo);
 
     console.log(5 + 6);
 
-// function printProps(p) {
-//     console.log(p.friends.one);
-//     for (var key in p) {
-//         var value = p[key];
-//         console.log(key + ": " + value + "\n");
-//     }
-// }
-//
-// var person = {
-//     first_name: "Luke",
-//     last_name: "Lance",
-//     age: 23,
-//     address: "1950 N Logan",
-//     friends: {
-//         one: "a",
-//         two: "b"
-//     },
-//     fullName: function() {
-//         return this.first_name + " " + this.last_name;
-//     }
-// };
-//
-// printProps(person);
-//
-// console.log("----------")
-//
-// console.log(person.first_name);
-// console.log(person["first_name"]);
-//
-// person.height = "5' 11\"";
-// console.log(person["height"]);
-//
-// console.log("----------")
-//
-// var simObj = function (c) {
-//     this.city = c;
-// }
-//
-// var live1 = new simObj("Brooklyn");
-// var live2 = new simObj("Bronx");
-//
-// //co
+    // function printProps(p) {
+    //     console.log(p.friends.one);
+    //     for (var key in p) {
+    //         var value = p[key];
+    //         console.log(key + ": " + value + "\n");
+    //     }
+    // }
+    //
+    // var person = {
+    //     first_name: "Luke",
+    //     last_name: "Lance",
+    //     age: 23,
+    //     address: "1950 N Logan",
+    //     friends: {
+    //         one: "a",
+    //         two: "b"
+    //     },
+    //     fullName: function() {
+    //         return this.first_name + " " + this.last_name;
+    //     }
+    // };
+    //
+    // printProps(person);
+    //
+    // console.log("----------")
+    //
+    // console.log(person.first_name);
+    // console.log(person["first_name"]);
+    //
+    // person.height = "5' 11\"";
+    // console.log(person["height"]);
+    //
+    // console.log("----------")
+    //
+    // var simObj = function (c) {
+    //     this.city = c;
+    // }
+    //
+    // var live1 = new simObj("Brooklyn");
+    // var live2 = new simObj("Bronx");
+    //
+    // //co
 }
 console.log("---------- ---------- ---------- ---------- ----------");
 {
@@ -69,10 +67,9 @@ console.log("---------- ---------- ---------- ---------- ----------");
     // Array slice() vs splice()
     // What is prototype
 
-
     console.log("Message a" - "Message b"); // NaN
 
-    numbers = "123456" // this is 0 base
+    numbers = "123456"; // this is 0 base
     for (var i = 0; i < 6; i++) {
         if (i == 3) {
             continue;
@@ -83,12 +80,12 @@ console.log("---------- ---------- ---------- ---------- ----------");
     a = 8 + 8;
     console.log(a);
     a = 8 + "8";
-    console.log(a)
+    console.log(a);
 
     var a = numbers.indexOf(3);
-    console.log(a)
+    console.log(a);
     var a = numbers.substring(1, 3);
-    console.log(a)
+    console.log(a);
 
     var a = "4";
     var b = 5;
@@ -100,7 +97,7 @@ console.log("---------- ---------- ---------- ---------- ----------");
 
     var m = 5;
     var m = 6;
-    console.log(m)
+    console.log(m);
 
     let n = 5;
     //let n = 6;
@@ -118,20 +115,20 @@ console.log("---------- ---------- ---------- ---------- ----------");
     console.log(secondDate);
     console.log(thirdDate);
 
-    console.log("---")
+    console.log("---");
 
     console.log(firstDate == secondDate);
     console.log(firstDate === secondDate);
     console.log(firstDate === thirdDate);
 
-    console.log("---")
+    console.log("---");
 
     console.log(firstDate);
     console.log(firstDate.getTime());
     console.log(firstDate.getMilliseconds());
     console.log(firstDate.getHours());
 
-    console.log("---")
+    console.log("---");
 
     console.log(+firstDate === +secondDate);
     console.log(firstDate.getTime() === secondDate.getTime());
@@ -140,7 +137,7 @@ console.log("---------- ---------- ---------- ---------- ----------");
 
     console.log("----------");
 
-    console.log("Regular expressions")
+    console.log("Regular expressions");
 
     var data = "4,5 ,   6 , 7, 8 + 5 ,   aa9".split(/\s*,\s*/).reverse();
     console.log(data);
@@ -162,23 +159,23 @@ console.log("---------- ---------- ---------- ---------- ----------");
 
     console.log("total = " + sum2);
 
-    console.log("---")
+    console.log("---");
 
     let sum3 = 0;
     const numbers3 = [65, 44, 12, 4];
     numbers3.forEach(function (item) {
         sum3 += item;
-    })
+    });
 
     console.log("total = " + sum3);
 
-    console.log("---")
+    console.log("---");
 
     let sum4 = 0;
     const numbers4 = [65, 44, 12, 4];
-    numbers4.forEach(num => {
+    numbers4.forEach((num) => {
         sum4 += num;
-    })
+    });
 
     console.log("total = " + sum4);
 
@@ -214,8 +211,6 @@ console.log("----------");
     var person = {
         firstName: "John",
     };
-
-
 }
 console.log("----------");
 {
@@ -233,11 +228,3 @@ console.log("----------");
 
     console.log(x);
 }
-
-
-
-
-
-
-
-
