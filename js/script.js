@@ -9,6 +9,31 @@ console.log("---------- ---------- ---------- ---------- ----------");
 
     console.log(5 + 6);
 
+    let greeting = "say Hi";
+    if (true) {
+        console.log(greeting);
+        //let greeting ="say Hello"; // This will give Error
+        //console.log(greeting);
+    }
+    console.log(greeting);
+
+    // Declaring a const object
+    const object1 = {
+        name: "Rock",
+        age: 10
+    }
+
+    //// We cannot do this
+    //object1 = {
+    //    number: "five"
+    //}
+
+    // We can do this
+    object1.name = "Paper";
+    console.log(object1.name);
+
+
+
     // function printProps(p) {
     //     console.log(p.friends.one);
     //     for (var key in p) {
