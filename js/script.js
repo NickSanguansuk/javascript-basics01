@@ -399,10 +399,91 @@ console.log("---------- ---------- ---------- ---------- ----------");
     console.log(myScope2);  // global variable value has changed
     console.log(result2);   // global namespace cluttered.
 
+    console.log("----------");
+    console.log("Hoisting");
+
+    person2 = {
+        first_name: "Luke",
+        last_name: "Lance",
+        age: 23
+    };
+    function printProps2(p) {
+        for (var o in p) {
+            console.log(o + ": " + p[o] + "\n");
+        }
+    }
+    printProps2(person2);
+    var person2;
+
+    console.log("---");
+
+    function printProps3(p) {
+        for (var o in p) {
+            console.log(o + ": " + p[o] + "\n");
+        }
+    }
+    printProps3(person3); // This line print nothing
+    console.log(person3); // This line print undefined
+    var person3 = {
+        first_name: "Luke",
+        last_name: "Lance",
+        age: 23
+    };
+
+    console.log("----------");
+    console.log("Type of and null");
+
+    console.log(typeof 42); // expected output: "number"
+    console.log(typeof "blubber"); // expected output: "string"
+    console.log(typeof true); // expected output: "boolean"
+    console.log(typeof undeclaredVariable); // expected output: "undefined"
+    console.log(typeof null);
+
+    console.log("----------");
+    console.log("Debugger");
+
+    var url = /(\w+):\/\/([\w.]+)\/(\S*)/;
+    var text = "Visit my blog at https://www.example.com/~david";
+    var result3 = text.match(url);
+    if (result3 != null) {
+        var fullUrl = result3[0]; // Contains "https://www.example.com/~david"
+        var protocol = result3[1]; // Contains "https"
+        //debugger; // Can also do this on Chrome ---> Inspect > Sources > click the line that want to debug > F5
+        var host = result3[2]; // Contains "www.example.com"
+        var path = result3[3]; // Contains "~david"
+    }
+    console.log("fullUrl: ", fullUrl);
+    console.log("protocol: ", protocol);
+    console.log("host: ", host);
+    console.log("path: ", path);
+
+    console.log("----------");
+    console.log("Custom Error");
+
+    console.log(Error);
+
+    console.log("---")
+
+    const err = new Error("Custom Error made by the developer");
+    console.log(err);
+
+    console.log("---")
+
+    var someFunc = function (a) {
+        if (a === 4) {
+            throw err;
+        }
+    }
+
+    try {
+        someFunc(4);
+    } catch (e) {
+        console.log("Logging Customer Error");
+        console.log(e);
+    }
 
 
-    // console.log("----------");
-    //
+
     // console.log(person.first_name);
     // console.log(person["first_name"]);
     //
@@ -431,6 +512,7 @@ console.log("---------- ---------- ---------- ---------- ----------");
     // map vs forEach
     // Array slice() vs splice()
     // What is prototype
+    // Login validation RegEx pattern
 
     console.log("Message a" - "Message b"); // NaN
 
