@@ -7,19 +7,43 @@
 <body>
 <script>
     function fnOnClick() {
-        var ulv = document.getElementById('items');
+        let ulv = document.getElementById("items");
+        changeColorBlack();
+
         console.log(ulv);
         for (let i = 0; i < ulv.children.length; i++) {
             console.log(ulv.children[i].textContent);
         }
 
-        var newElement = document.createElement('li');
+        let newElement = document.createElement("li");
         newElement.textContent = "node.appendChild(): Add a node as the last child of a parent element";
         ulv.appendChild(newElement);
 
         //x = new RegExp('^[a-zA-Z()]$');
         //x = new RegExp('^\\d+$');
     }
+
+    function fnOnSubmit() {
+        let input1 = document.getElementById("input1");
+        let input2 = document.getElementById("input2");
+
+        if (input1.value === input2.value ) {
+            alert("input 1 === input 2")
+        } else {
+            alert("not equal")
+        }
+    }
+
+    function changeColorRed() {
+        let ulv = document.getElementById("items");
+        ulv.lastElementChild.style.color = "red";
+    }
+    function changeColorBlack() {
+        let ulv = document.getElementById("items");
+        ulv.lastElementChild.style.color = "black";
+    }
+
+    //button.onclick = fn;
 </script>
 
 <header id="main-header">
@@ -37,25 +61,45 @@
     <li name="list-group-item">Item 2</li>
     <li name="list-group-item">Item 3</li>
 </ul>
-<form id="form1">
-    <input id="input1" type="text" name="input1" value="abcdef">
-    <input id="button1" type="button" name="button1" value="Show My Location">
+<form id="form2" onSubmit="onSubmit()">
+    <input id="input1" type="text" name="input1" value="abcde">
+    <input id="input2" type="text" name="input2" value="1234">
+    <input id="bb" name="bb" type="button" onMouseOut="changeColorBlack()" value="Show My Location">
+
+    <input type="submit" value="Submit">
 </form>
 
 <script>
+    let button = document.getElementById("bb");
+    button.addEventListener("click", fnOnClick);
 
+    button.addEventListener("mouseover", changeColorRed);
+    //button.addEventListener("mouseout", changeColorBlack);
 
-    function changeColor() {
-        var ulv = document.getElementById('items');
-        ulv.lastElementChild.style.color = "red";
-    }
+    document.getElementById("input1").addEventListener("focus", changeColorRed);
+    document.getElementById("input1").addEventListener("blur", changeColorBlack);
 
-    var fn = () => {
-        fnOnClick();
-    }
+    document.addEventListener("keydown", function() {
+        console.log("key: " + event.keyCode);
+        console.log("key: " + event.key);
+        console.log("code: " + event.code);
 
-    var header = document.getElementById('header-title');
-    console.log(header);
+        if ( event.key == "a") {
+            fnOnClick();
+        }
+    });
+
+    //function changeColor() {
+    //    var ulv = document.getElementById('items');
+    //    ulv.lastElementChild.style.color = "red";
+    //}
+    //
+    //var fn = () => {
+    //    fnOnClick();
+    //}
+    //
+    //var header = document.getElementById('header-title');
+    //console.log(header);
 </script>
 </body>
 </html>

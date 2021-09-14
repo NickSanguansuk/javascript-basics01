@@ -976,7 +976,8 @@ console.log("---------- ---------- ---------- ---------- ----------");
     let stopper = 0;
     //let userGuess = prompt("Guess a number between ${range[0]} and ${range[1]}");
     let userGuess = prompt("Guess a number between " + range[0] + " and " + range[1]);
-    while (stopper <= 3) {
+    while (stopper < 4) {
+        stopper++;
         if (guess == userGuess) {
             alert("You got it: " + userGuess);
             break;
@@ -986,8 +987,6 @@ console.log("---------- ---------- ---------- ---------- ----------");
     if (guess != userGuess) {
         alert("Sorry, the answer was " + guess);
     }
-
-
 
     console.log("----------");
 
