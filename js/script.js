@@ -40,7 +40,7 @@ console.log("---------- ---------- ---------- ---------- ----------");
 
     let i2 = 4;
 
-    console.log(i2!=5);
+    console.log(i2 != 5);
 
     var x = function () {
         if (i2 != 5) {
@@ -115,17 +115,17 @@ console.log("---------- ---------- ---------- ---------- ----------");
     console.log("----------");
 
     var data = "1+2, 2+3, 3+4, 4+5, 5 + 1 ".split(/\s*,\s*/).reverse();
-    console.log(data[1][0]+data[1][2]);
+    console.log(data[1][0] + data[1][2]);
 
     console.log("----------");
 
-    var arr = [1, 2, 3, 4, 5, ];
+    var arr = [1, 2, 3, 4, 5,];
     console.log(arr);
-    arr.forEach(function(value, index, array) {
+    arr.forEach(function (value, index, array) {
         array[index] = value * value
     });
     console.log(arr);
-    console.log(arr.reverse().filter(function(x) {
+    console.log(arr.reverse().filter(function (x) {
         return x % 5 // if x % 5 equal 0, it will return false.
     }));
     console.log(arr);
@@ -182,6 +182,7 @@ console.log("---------- ---------- ---------- ---------- ----------");
     }
 
     console.log("##### ---------- #####");
+
 }
 console.log("---------- ---------- ---------- ---------- ----------");
 {
@@ -308,6 +309,9 @@ console.log("---------- ---------- ---------- ---------- ----------");
     }
     console.log("numbers", nums);
     console.log("operands", operand);
+
+    console.log("----------");
+
 }
 console.log("---------- ---------- ---------- ---------- ----------");
 {
@@ -340,7 +344,7 @@ console.log("---------- ---------- ---------- ---------- ----------");
     console.log("Function with object");
 
     function printProps(p) {
-        console.log(p.friends.one);
+        console.log(p.friends.one); // a
         for (let key in p) {
             let value = p[key];
             console.log(key);
@@ -364,6 +368,36 @@ console.log("---------- ---------- ---------- ---------- ----------");
     };
 
     printProps(person);
+
+    console.log("---")
+
+    console.log(person.first_name);     // Luke
+    console.log(person["first_name"]);  // Luke
+
+    person.height = "5' 11\"";
+    console.log(person["height"]);      // 5' 11"
+
+    console.log(person.fullName());     // Luke Lance
+    console.log(person["fullName"]);    // f () { ... }
+
+    console.log("---")
+
+    delete person.age;
+
+    var myArray1 = Object.values(person);
+    var myArray2 = Object.keys(person);
+
+    console.log(person);
+    console.log(myArray1);
+    console.log(myArray2);
+
+    console.log("\n");
+    for (x in person) {
+        console.log(x);
+        console.log(person[x]);
+        console.log(x + ": " + person[x]);
+        console.log("\n");
+    }
 
     console.log("----------");
     console.log("Variable Scope");
@@ -407,11 +441,13 @@ console.log("---------- ---------- ---------- ---------- ----------");
         last_name: "Lance",
         age: 23
     };
+
     function printProps2(p) {
         for (var o in p) {
             console.log(o + ": " + p[o] + "\n");
         }
     }
+
     printProps2(person2);
     var person2;
 
@@ -422,6 +458,7 @@ console.log("---------- ---------- ---------- ---------- ----------");
             console.log(o + ": " + p[o] + "\n");
         }
     }
+
     printProps3(person3); // This line print nothing
     console.log(person3); // This line print undefined
     var person3 = {
@@ -482,14 +519,125 @@ console.log("---------- ---------- ---------- ---------- ----------");
         console.log(e);
     }
 
+    console.log("----------");
+    console.log("Strict Mode");
+
+    function iUseStrictMode() {
+        "use strict";
+        //strict = "use strict mode"; // Uncaught ReferenceError: strict is not defined
+        let strict = "The strict mode";
+        console.log("I will use " + strict);
+    }
+
+    iUseStrictMode();
+
+    function iDontUseStrictMode() {
+        noStrict = "The not strict mode";
+        console.log("I will use " + noStrict);
+    }
+
+    iDontUseStrictMode();
+
+    console.log("----------");
+    console.log("bin, oct, Decimal, hex");
+
+    const bin = (10).toString(2);
+    const oct = (10).toString(8);
+    const hex = (10).toString(16);
+    console.log(bin); // 1010
+    console.log(oct); // 12
+    console.log(hex); // a
+
+    const dec0 = parseInt("1010", 2);
+    const dec1 = parseInt("12", 8);
+    const dec2 = parseInt("a", 16);
+    console.log(dec0); // 10
+    console.log(dec1); // 10
+    console.log(dec2); // 10
+
+    let bin2 = 0b0111;
+    console.log(bin2); // 7
+    let oct2 = 0o0051;
+    console.log(oct2); // 41
+    let hex2 = 0x002A;
+    console.log(hex2); // 42
+
+    console.log("----------");
+
+}
+console.log("---------- ---------- ---------- ---------- ----------");
+{
+    console.log("Basics JavaScript Day 2");
+
+    console.log("----------");
+    console.log("Creating a JavaScript Object");
+
+    console.log("1. Define and create a single object by using an object literal.\n");
+
+    // Declare a object for student and specify the default values
+    let student1 = {
+        id: 2244,
+        firstName: "John",
+        lastName: "Doe",
+        age: 30,
+        class: "Java Developer",
+        fullName: function () {
+            return this.firstName + " " + this.lastName;
+        },
+        getDoubleAge: function () {
+            return this.age * 2;
+        }
+    };
+
+    // Add new property for score and value 90%
+    student1.score = "90%";
+
+    // Print
+    console.log(student1.firstName);
+    console.log(student1.class);
+    console.log(student1.score);
+    console.log(student1);
+    console.log(typeof student1);
+    console.log(student1.constructor);
+    console.log(student1.toLocaleString());
+
+    console.log("---");
+    console.log("more on creating objects using literal");
+
+    let empty = {};                                 // An object with no properties
+    let point = {x: 0, y: 0};                       // Two properties
+    let point2 = {x: point.x, y: point.y + 1};      // More complex value
+    let book = {
+        "main title": "JavaScript", // Property names include spaces,
+        'sub-title': "The Definitive Guide", // and hyphens, so use string literals
+        "for": "all audiences", // for is a reserved word, so quote
+        author: { // The value of this property is itself an object. Note that these property names are unquoted.
+            firstName: "David",
+            lastName: "Flanagan"
+        }
+    };
+
+    console.log("2. Define and create a single object  with the keyword new.\n");
+
+    
 
 
-    // console.log(person.first_name);
-    // console.log(person["first_name"]);
-    //
-    // person.height = "5' 11\"";
-    // console.log(person["height"]);
-    //
+
+
+    console.log("3. Define an object constructor, and then create objects of the constructed type(using this keyword).\n");
+
+
+    console.log("----------");
+
+}
+console.log("---------- ---------- ---------- ---------- ----------");
+{
+    console.log("Basics JavaScript Day 3");
+
+    console.log("----------");
+    console.log("");
+
+
     // console.log("----------")
     //
     // var simObj = function (c) {
@@ -638,40 +786,41 @@ console.log("---------- ---------- ---------- ---------- ----------");
             console.log("Invalid: " + e);
         }
     }
-}
-console.log("----------");
-{
-    var arr = [1, 2, 3, 4, 5, 6];
 
-    var sp = arr.splice(2);
+    console.log("----------");
+    {
+        var arr = [1, 2, 3, 4, 5, 6];
 
-    console.log(arr);
-    console.log(sp);
-}
-console.log("----------");
-{
-    let sum = 0;
-    const numbers = [65, 44, 12, 4];
-}
-console.log("----------");
-{
-    var person = {
-        firstName: "John",
-    };
-}
-console.log("----------");
-{
-    var i = 3;
-    var x = function () {
-        if (i != 5) {
-            x = true;
-            return x;
-        } else {
-            x = false;
-            return x;
-        }
-        //return x;
-    };
+        var sp = arr.splice(2);
 
-    console.log(x);
+        console.log(arr);
+        console.log(sp);
+    }
+    console.log("----------");
+    {
+        let sum = 0;
+        const numbers = [65, 44, 12, 4];
+    }
+    console.log("----------");
+    {
+        var person = {
+            firstName: "John",
+        };
+    }
+    console.log("----------");
+    {
+        var i = 3;
+        var x = function () {
+            if (i != 5) {
+                x = true;
+                return x;
+            } else {
+                x = false;
+                return x;
+            }
+            //return x;
+        };
+
+        console.log(x);
+    }
 }
