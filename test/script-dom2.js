@@ -53,6 +53,14 @@ console.log('----------');
 }
 console.log('----------');
 {
+    let q1 = document.querySelector('font[color="blue"]');
+    console.log(q1);
+    let q2 = document.querySelector('li>font>b');
+    console.log(q2);
+    let q3 = document.querySelector('li>font[color="blue"]>u');
+    console.log(q3);
+    let q4  = document.querySelector('#LastLi, .green');
+    console.log(q4);
 
 }
 console.log('----------');
