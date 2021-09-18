@@ -1087,10 +1087,6 @@ console.log('---------- ---------- ---------- ---------- ----------');
 {
     console.log('KBA review');
 
-    // how to print in the same line
-    // JQuery
-    // Login validation RegEx pattern
-
     console.log('Message a' - 'Message b'); // NaN
 
     numbers = '123456'; // this is 0 base
