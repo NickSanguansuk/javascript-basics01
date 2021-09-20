@@ -42,11 +42,11 @@ console.log('----------');
 }
 console.log('----------');
 {
-    let selectorID= document.querySelector('#selectorID');
+    let selectorID = document.querySelector('#selectorID');
     console.log(selectorID);
-    let selectorClass= document.querySelector('.selectorClass');
+    let selectorClass = document.querySelector('.selectorClass');
     console.log(selectorClass);
-    let selectorTag= document.querySelector('u');
+    let selectorTag = document.querySelector('u');
     console.log(selectorTag);
     console.log(document.querySelector("p.example"));
 
@@ -59,20 +59,59 @@ console.log('----------');
     console.log(q2);
     let q3 = document.querySelector('li>font[color="blue"]>u');
     console.log(q3);
-    let q4  = document.querySelector('#LastLi, .green');
+    let q4 = document.querySelector('#LastLi, .green');
     console.log(q4);
 
 }
 console.log('----------');
 {
     const q1 = document.querySelectorAll('font>b>u');
-    for(let i in q1){
+    for (let i in q1) {
         console.log(q1[i]);
     }
 }
 console.log('----------');
 {
+    console.log(document);
+    console.log(document.documentElement);
+    console.log(document.head);
+    console.log(document.body);
+}
+console.log('----------');
+{
+    console.log(document.querySelector('ul').parentNode);
+    console.log(document.querySelector('li').parentNode);
+}
+console.log('----------');
+{
+    console.log(document.querySelector('ul').firstElementChild);
+    console.log(document.querySelector('ul').lastElementChild);
+    console.log(document.querySelector('ul').childNodes);
+}
+console.log('----------');
+{
+    let ul = document.querySelector('ul');
+    console.log(ul.previousElementSibling);
+    console.log(ul.nextElementSibling);
 
+}
+console.log('----------');
+{
+    function showCommentForm() {
+        let data = 'Your location is USA';
+        document.getElementById('myLocation').innerHTML = data;
+    }
+
+}
+console.log('----------');
+{
+    let newElement = document.createElement('p');
+    newElement.textContent = "We've created a new p element on the document by using the createElement() method. In order to add text to the element, we can use the textContent property";
+    console.log(newElement );
+    newElement.innerHTML="The innerHTML property allows you to add <strong>HTML</strong> as well as text to an element"
+    console.log(newElement );
+    let newTextNode = document.createTextNode("It is also possible to create a text node with the createTextNode() method");
+    console.log(newTextNode);
 }
 console.log('----------');
 {
@@ -95,13 +134,10 @@ console.log('----------');
 
 }
 console.log('----------');
+{
 
-
-
-
-
-
-
+}
+console.log('----------');
 
 
 
