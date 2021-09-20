@@ -65,12 +65,36 @@ console.log('----------');
 }
 console.log('----------');
 {
+    const q1 = document.querySelectorAll('font>b>u');
+    for(let i in q1){
+        console.log(q1[i]);
+    }
+}
+console.log('----------');
+{
 
 }
 console.log('----------');
+{
 
+}
+console.log('----------');
+{
 
+}
+console.log('----------');
+{
 
+}
+console.log('----------');
+{
+
+}
+console.log('----------');
+{
+
+}
+console.log('----------');
 
 
 
