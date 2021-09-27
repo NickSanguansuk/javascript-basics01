@@ -143,12 +143,35 @@ console.log('----------');
     let ul = document.querySelector('#ul02');
     ul.removeChild(ul.firstElementChild);
 
-    let uselessElement= document.querySelector('#useless02');
+    let uselessElement = document.querySelector('#useless02');
     uselessElement.remove();
 }
 console.log('----------');
 {
+    console.log('Modifying Styles');
 
+    let div = document.querySelector('#myDiv');
+    // Edit the styles is with setAttribute(
+    div.setAttribute('style', 'text-align: center');
+    // Apply style to div directly.
+    div.style.backgroundColor = 'coral';
+    div.style.color = 'white';
+    div.style.height = '100px';
+    div.style.width = '100px';
+    div.style.border = '2px solid black';
+    // Make div into a circle and vertically center the text
+    div.style.borderRadius = '50%';
+    div.style.display = 'flex';
+    div.style.justifyContent = 'center';
+    div.style.alignItems = 'center';
+
+    // Testing ---> make it center
+    //div.style.margin = 'auto';
+
+    //div.style.float ='right';
+
+    //div.parentElement.style.display = 'flex';
+    //div.parentElement.style.justifyContent = 'center';
 }
 console.log('----------');
 {
