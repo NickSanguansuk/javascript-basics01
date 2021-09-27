@@ -72,6 +72,7 @@ console.log('----------');
 }
 console.log('----------');
 {
+    console.log('Root Nodes');
     console.log(document);
     console.log(document.documentElement);
     console.log(document.head);
@@ -106,6 +107,8 @@ console.log('----------');
 }
 console.log('----------');
 {
+    console.log('Creating New Nodes');
+
     let newElement = document.createElement('p');
     newElement.textContent = "We've created a new p element on the document by using the createElement() method. In order to add text to the element, we can use the textContent property";
     console.log(newElement);
@@ -116,6 +119,8 @@ console.log('----------');
 }
 console.log('----------');
 {
+    console.log('Inserting Nodes into the DOM');
+
     //let ul = document.querySelector('ul');
     //let ul = document.getElementById('ul01');
     let ul = document.querySelector('#ul01');
@@ -133,7 +138,13 @@ console.log('----------');
 }
 console.log('----------');
 {
+    console.log('Removing Nodes');
 
+    let ul = document.querySelector('#ul02');
+    ul.removeChild(ul.firstElementChild);
+
+    let uselessElement= document.querySelector('#useless02');
+    uselessElement.remove();
 }
 console.log('----------');
 {
