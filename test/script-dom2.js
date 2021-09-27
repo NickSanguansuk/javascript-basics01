@@ -91,6 +91,7 @@ console.log('----------');
 console.log('----------');
 {
     let ul = document.querySelector('ul');
+    console.log(ul);
     console.log(ul.previousElementSibling);
     console.log(ul.nextElementSibling);
 
@@ -107,15 +108,28 @@ console.log('----------');
 {
     let newElement = document.createElement('p');
     newElement.textContent = "We've created a new p element on the document by using the createElement() method. In order to add text to the element, we can use the textContent property";
-    console.log(newElement );
-    newElement.innerHTML="The innerHTML property allows you to add <strong>HTML</strong> as well as text to an element"
-    console.log(newElement );
+    console.log(newElement);
+    newElement.innerHTML = "The innerHTML property allows you to add <strong>HTML</strong> as well as text to an element"
+    console.log(newElement);
     let newTextNode = document.createTextNode("It is also possible to create a text node with the createTextNode() method");
     console.log(newTextNode);
 }
 console.log('----------');
 {
-
+    //let ul = document.querySelector('ul');
+    //let ul = document.getElementById('ul01');
+    let ul = document.querySelector('#ul01');
+    console.log(ul);
+    let newElement = document.createElement('li');
+    newElement.textContent = "node.appendChild(): Add a node as the last child of a parent element";
+    ul.appendChild(newElement);
+    let anotherElement = document.createElement('li');
+    anotherElement.textContent = "node.insertBefore(): Insert a node into the parent element before a specified sibling node";
+    ul.insertBefore(anotherElement, newElement);
+    let uselessElement = document.querySelector('#useless');
+    let aDifferentElement = document.createElement('li');
+    aDifferentElement.textContent = "node.replaceChild(): Replace an existing node with a new node";
+    ul.replaceChild(aDifferentElement, uselessElement);
 }
 console.log('----------');
 {
