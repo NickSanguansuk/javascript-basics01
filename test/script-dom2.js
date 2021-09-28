@@ -175,6 +175,53 @@ console.log('----------');
 }
 console.log('----------');
 {
+    console.log('1: Inline Event Handler Attributes');
+
+    function changeText () {
+        let p = document.querySelector('#p03');
+        p.textContent = "I changed because of an inline event handler.";
+    }
+
+    //// This need to be in the same file (need to be in the HTML)
+    //let changeText = () => {
+    //    let p = document.querySelector('#p03');
+    //    p.textContent = "I changed because of an inline event handler.";
+    //}
+}
+console.log('----------');
+{
+    console.log('2: Event Handler Properties');
+
+    let button = document.querySelector('#button04');
+    // Function to modify the text content of the paragraph
+    let changeText = () => {
+        let p = document.querySelector('#p04');
+        p.textContent = "I changed because of an event handler property.";
+        button.textContent="I was clicked";
+    }
+    // Add event handler as a property of the button element
+    button.onclick = changeText;
+}
+console.log('----------');
+{
+    console.log('3: Event Listeners');
+
+    const button = document.querySelector('#button05');
+    // Function to modify the text content of the paragraph
+    const changeText = () => {
+        const p = document.querySelector('#p05');
+        p.textContent = "I changed because of an event listener.";
+        button.textContent="I was clicked";
+    }
+    // Listen for click event
+    button.addEventListener('click', changeText);
+}
+console.log('----------');
+{
+
+}
+console.log('----------');
+{
 
 }
 console.log('----------');
@@ -186,7 +233,6 @@ console.log('----------');
 
 }
 console.log('----------');
-
 
 
 
