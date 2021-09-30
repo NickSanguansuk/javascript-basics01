@@ -103,6 +103,49 @@
             <button id="button05">Click me</button>
             <p id="p05">Try to change me...</p>
         </div>
+        <div>
+            <h3>Example - Mouse Events onclick (Inline Event Handler)</h3>
+            <input type="button" onclick="clickEvent()" value="Who's this?">
+
+            <h3>Example - Mouse Events onmouseover (Inline Event Handler)</h3>
+            <p onmouseover="mouseOverEvent()">Keep cursor over me</p>
+        </div>
+        <div>
+            <h1>Form Events</h1>
+            <form id="form06">
+                First name:
+                <br>
+                <input type="text" id="fName">
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div>
+            <h3>Example - Form Events onfocus (Inline Event Handler)</h3>
+            <input type="text" id="input07" onfocus="focusEvent()"/>
+
+            <h3>Example - Form Events onsubmit (Inline Event Handler)</h3>
+            <form name="form" onsubmit="return(validate());">
+                <input type="text" name="name" id="name08">
+                <input type="submit" name="submit" value="submit">
+            </form>
+        </div>
+        <div>
+            <h1>Keyboard Events & Keyboard Events Properties</h1>
+            <p>Please press any Key</p>
+        </div>
+        <div>
+            <h1>Keyboard Events & Keyboard Events Properties 2</h1>
+            <div style="text-align:center;width:480px;">
+                <p>Press A, W, D or S for Up left right or down</p>
+                <button id='KeyW'>UP</button>
+                <br><br>
+                <button id='KeyA'>LEFT</button>
+                <button id='KeyD'>RIGHT</button>
+                <br><br>
+                <button id='KeyS'>DOWN</button>
+            </div>
+        </div>
     </section>
 </main>
 <footer>

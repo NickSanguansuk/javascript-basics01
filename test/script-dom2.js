@@ -177,7 +177,7 @@ console.log('----------');
 {
     console.log('1: Inline Event Handler Attributes');
 
-    function changeText () {
+    function changeText() {
         let p = document.querySelector('#p03');
         p.textContent = "I changed because of an inline event handler.";
     }
@@ -197,7 +197,7 @@ console.log('----------');
     let changeText = () => {
         let p = document.querySelector('#p04');
         p.textContent = "I changed because of an event handler property.";
-        button.textContent="I was clicked";
+        button.textContent = "I was clicked";
     }
     // Add event handler as a property of the button element
     button.onclick = changeText;
@@ -211,14 +211,93 @@ console.log('----------');
     const changeText = () => {
         const p = document.querySelector('#p05');
         p.textContent = "I changed because of an event listener.";
-        button.textContent="I was clicked";
+        button.textContent = "I was clicked";
     }
     // Listen for click event
     button.addEventListener('click', changeText);
 }
 console.log('----------');
 {
+    console.log('Example - Mouse Events onclick (Inline Event Handler)');
 
+    function clickEvent() {
+        document.write("This is PerScholas");
+    }
+
+    console.log('Example - Mouse Events onmouseover (Inline Event Handler)');
+
+    function mouseOverEvent() {
+        alert("This is PerScholas and You are learners");
+    }
+}
+console.log('----------');
+{
+    console.log("Form Events");
+
+    const name = document.getElementById("fName");
+    name.addEventListener('focus', changeToCoral);
+    name.addEventListener('blur', changeToWhite);
+    document.querySelector('#form06').addEventListener("submit", function () {
+        alert(name.value)
+    });
+
+    function changeToCoral() {
+        name.style.backgroundColor = 'coral';
+    }
+
+    function changeToWhite() {
+        name.style.backgroundColor = 'white';
+    }
+}
+console.log('----------');
+{
+    console.log("Example - Form Events onfocus (Inline Event Handler)");
+
+    function focusEvent() {
+        document.getElementById("input07").style.background = "aqua";
+    }
+
+    console.log("Example - Form Events onsubmit (Inline Event Handler)");
+
+    function validate() {
+        let inputValue = document.getElementById("name08").value;
+        alert(inputValue);
+        return true
+    }
+}
+console.log('----------');
+{
+    console.log("Keyboard Events & Keyboard Events Properties");
+
+    document.addEventListener('keypress', function () {
+        console.log("You pressed a key, Thanks!");
+    });
+
+    document.addEventListener('keydown', function () {
+        console.log('keyCode: ' + event.keyCode); // ASCII
+        console.log('key:     ' + event.key);
+        console.log('code:    ' + event.code);
+    });
+}
+console.log('----------');
+{
+    console.log("Keyboard Events & Keyboard Events Properties 2");
+
+    // Pass an event through to a listener
+    document.addEventListener('keydown', function () {
+        changeToCoral(document.getElementById(event.code));
+    });
+    document.addEventListener('keyup', function () {
+        backToNormal(document.getElementById(event.code));
+    });
+
+    function changeToCoral(eventTarget) {
+        eventTarget.style.backgroundColor = 'coral';
+    }
+
+    function backToNormal(eventTarget) {
+        eventTarget.style.backgroundColor = '';
+    }
 }
 console.log('----------');
 {
@@ -233,7 +312,6 @@ console.log('----------');
 
 }
 console.log('----------');
-
 
 
 
