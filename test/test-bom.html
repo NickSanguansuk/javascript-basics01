@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test BOM</title>
+    <link rel="stylesheet" type="text/css" href="styles-bom.css">
+    <script type="text/javascript" src="script-bom.js" defer></script>
+</head>
+<body>
+<header>
+
+</header>
+<main>
+    <section>
+        <div>
+            <h1>Getting information about the window</h1>
+            <h3>Information about the Window</h3>
+            <table border="2">
+                <tr>
+                    <th>outerWidth:</th>
+                    <td id="ow01"></td>
+                    <th>outerHeight:</th>
+                    <td id="oh01">
+                </tr>
+                <tr>
+                    <th>innerWidth:</th>
+                    <td id="iw01"></td>
+                    <th>innerHeight:</th>
+                    <td id="ih01"></td>
+                </tr>
+                <tr>
+                    <th>pageXOffset:</th>
+                    <td id="xOffset01"></td>
+                    <th>pageYOffset:</th>
+                    <td id="yOffset01"></td>
+                </tr>
+                <tr>
+                    <th>screenX:</th>
+                    <td id="screenX01"></td>
+                    <th>screenY:</th>
+                    <td id="screenY01"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h1>Opening and closing windows</h1>
+            <p>Click the buttons below</p>
+            <button type="button" onclick="newWindow()">Open New Window</button>
+            <button type="button" onclick="closeWindow()">Close Window!</button>
+        </div>
+        <div>
+            <h1>Interaction with the window</h1>
+            <p>Click the buttons below</p>
+            <button class="button03" id="scroll03">Scroll</button>
+            <button class="button03" id="print03">Print</button>
+        </div>
+        <div>
+            <h1>Screen Object</h1>
+            <h3>Information about the screen</h3>
+            <table border="2">
+                <tr>
+                    <th>availWidth:</th>
+                    <td id="aw04"></td>
+                    <th>availHeight:</th>
+                    <td id="ah04"></td>
+                </tr>
+                <tr>
+                    <th>screen.width:</th>
+                    <td id="sw04"></td>
+                    <th>screen.height:</th>
+                    <td id="sh04"></td>
+                </tr>
+                <tr>
+                    <th> colorDepth:</th>
+                    <td id="cd04"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h1>Location Object</h1>
+            <table border="2">
+                <tr>
+                    <td id="a04"></td>
+                </tr>
+                <tr>
+                    <td id="b04"></td>
+                </tr>
+                <tr>
+                    <td id="c04"></td>
+                </tr>
+                <tr>
+                    <td id="d04"></td>
+                </tr>
+                <tr>
+                    <td id="e04"></td>
+                </tr>
+                <tr>
+                    <td id="f04"></td>
+                </tr>
+                <tr>
+                    <td id="g04"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h1>History Object</h1>
+            <input type="button" value="Back" onclick="goBack()">
+
+            <button class="button05" id="back05">back()</button>
+            <button class="button05" id="forward05">forward()</button>
+            <button class="button05" id="go05">go()</button>
+        </div>
+        <div>
+            <h1>Navigator Object</h1>
+            <h3>Determining the Browser</h3>
+            <input type="button" value="Which Browser?" id="btnBrowser06">
+
+            <h3>Determining the Platform</h3>
+            <p id="p06"></p>
+            <input type="button" value="Which Platform?" id="btnPlatform06">
+
+            <h3>Detecting Plugins</h3>
+            <ol id="ol06"></ol>
+
+            <table border="2">
+                <tr>
+                    <td id="a06"></td>
+                </tr>
+                <tr>
+                    <td id="b06"></td>
+                </tr>
+                <tr>
+                    <td id="c06"></td>
+                </tr>
+                <tr>
+                    <td id="d06"></td>
+                </tr>
+                <tr>
+                    <td id="e06"></td>
+                </tr>
+                <tr>
+                    <td id="f06"></td>
+                </tr>
+                <tr>
+                    <td id="g06"></td>
+                </tr>
+            </table>
+        </div>
+        <div onload="showInfo()">
+            <h3>Detecting information of Your browser</h3>
+            <button onclick="showInfo()">Show Information</button>
+            <div id="information07">
+
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>(If using Internal JavaScript, ...) This is never going to load because we use window.stop() in the previous
+        script</p>
+</footer>
+</body>
+</html>
