@@ -8,29 +8,29 @@ console.log('----------');
 
     function validate() {
         // Validate name
-        if (document.myForm.name.value === "") {
-            alert("Please provide your name!");
+        if (document.myForm.name.value === '') {
+            alert('Please provide your name!');
             document.myForm.name.focus();
             return false;
         } else {
-            nameValue = document.getElementById("nameId").value;
+            nameValue = document.getElementById('nameId').value;
         }
 
         // Validate email
-        if (document.myForm.email.value === "") {
-            alert("Please provide your Email!");
+        if (document.myForm.email.value === '') {
+            alert('Please provide your Email!');
             document.myForm.email.focus();
             return false;
         }
-        if (document.myForm.email.value !== "") {
+        if (document.myForm.email.value !== '') {
             if (validateEmail()) {
-                emailValue = document.getElementById("emailId").value;
+                emailValue = document.getElementById('emailId').value;
             }
         }
 
         // Validate zip
-        if (document.myForm.zip.value === "" || isNaN(document.myForm.zip.value) || document.myForm.zip.value.length !== 5) {
-            alert("Please provide Zip Code in the format #####.");
+        if (document.myForm.zip.value === '' || isNaN(document.myForm.zip.value) || document.myForm.zip.value.length !== 5) {
+            alert('Please provide Zip Code in the format #####.');
             document.myForm.zip.focus();
             return false;
         } else {

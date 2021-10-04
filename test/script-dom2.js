@@ -48,7 +48,7 @@ console.log('----------');
     console.log(selectorClass);
     let selectorTag = document.querySelector('u');
     console.log(selectorTag);
-    console.log(document.querySelector("p.example"));
+    console.log(document.querySelector('p.example'));
 
 }
 console.log('----------');
@@ -110,11 +110,11 @@ console.log('----------');
     console.log('Creating New Nodes');
 
     let newElement = document.createElement('p');
-    newElement.textContent = "We've created a new p element on the document by using the createElement() method. In order to add text to the element, we can use the textContent property";
+    newElement.textContent = 'We\'ve created a new p element on the document by using the createElement() method. In order to add text to the element, we can use the textContent property';
     console.log(newElement);
-    newElement.innerHTML = "The innerHTML property allows you to add <strong>HTML</strong> as well as text to an element"
+    newElement.innerHTML = 'The innerHTML property allows you to add <strong>HTML</strong> as well as text to an element'
     console.log(newElement);
-    let newTextNode = document.createTextNode("It is also possible to create a text node with the createTextNode() method");
+    let newTextNode = document.createTextNode('It is also possible to create a text node with the createTextNode() method');
     console.log(newTextNode);
 }
 console.log('----------');
@@ -126,14 +126,14 @@ console.log('----------');
     let ul = document.querySelector('#ul01');
     console.log(ul);
     let newElement = document.createElement('li');
-    newElement.textContent = "node.appendChild(): Add a node as the last child of a parent element";
+    newElement.textContent = 'node.appendChild(): Add a node as the last child of a parent element';
     ul.appendChild(newElement);
     let anotherElement = document.createElement('li');
-    anotherElement.textContent = "node.insertBefore(): Insert a node into the parent element before a specified sibling node";
+    anotherElement.textContent = 'node.insertBefore(): Insert a node into the parent element before a specified sibling node';
     ul.insertBefore(anotherElement, newElement);
     let uselessElement = document.querySelector('#useless');
     let aDifferentElement = document.createElement('li');
-    aDifferentElement.textContent = "node.replaceChild(): Replace an existing node with a new node";
+    aDifferentElement.textContent = 'node.replaceChild(): Replace an existing node with a new node';
     ul.replaceChild(aDifferentElement, uselessElement);
 }
 console.log('----------');
@@ -179,7 +179,7 @@ console.log('----------');
 
     function changeText() {
         let p = document.querySelector('#p03');
-        p.textContent = "I changed because of an inline event handler.";
+        p.textContent = 'I changed because of an inline event handler.';
     }
 
     //// This need to be in the same file (need to be in the HTML)
@@ -196,8 +196,8 @@ console.log('----------');
     // Function to modify the text content of the paragraph
     let changeText = () => {
         let p = document.querySelector('#p04');
-        p.textContent = "I changed because of an event handler property.";
-        button.textContent = "I was clicked";
+        p.textContent = 'I changed because of an event handler property.';
+        button.textContent = 'I was clicked';
     }
     // Add event handler as a property of the button element
     button.onclick = changeText;
@@ -210,8 +210,8 @@ console.log('----------');
     // Function to modify the text content of the paragraph
     const changeText = () => {
         const p = document.querySelector('#p05');
-        p.textContent = "I changed because of an event listener.";
-        button.textContent = "I was clicked";
+        p.textContent = 'I changed because of an event listener.';
+        button.textContent = 'I was clicked';
     }
     // Listen for click event
     button.addEventListener('click', changeText);
@@ -221,23 +221,23 @@ console.log('----------');
     console.log('Example - Mouse Events onclick (Inline Event Handler)');
 
     function clickEvent() {
-        document.write("This is PerScholas");
+        document.write('This is PerScholas');
     }
 
     console.log('Example - Mouse Events onmouseover (Inline Event Handler)');
 
     function mouseOverEvent() {
-        alert("This is PerScholas and You are learners");
+        alert('This is PerScholas and You are learners');
     }
 }
 console.log('----------');
 {
     console.log("Form Events");
 
-    const name = document.getElementById("fName");
+    const name = document.getElementById('fName');
     name.addEventListener('focus', changeToCoral);
     name.addEventListener('blur', changeToWhite);
-    document.querySelector('#form06').addEventListener("submit", function () {
+    document.querySelector('#form06').addEventListener('submit', function () {
         alert(name.value)
     });
 
@@ -251,26 +251,26 @@ console.log('----------');
 }
 console.log('----------');
 {
-    console.log("Example - Form Events onfocus (Inline Event Handler)");
+    console.log('Example - Form Events onfocus (Inline Event Handler)');
 
     function focusEvent() {
-        document.getElementById("input07").style.background = "aqua";
+        document.getElementById('input07').style.background = 'aqua';
     }
 
-    console.log("Example - Form Events onsubmit (Inline Event Handler)");
+    console.log('Example - Form Events onsubmit (Inline Event Handler)');
 
     function validate() {
-        let inputValue = document.getElementById("name08").value;
+        let inputValue = document.getElementById('name08').value;
         alert(inputValue);
         return true
     }
 }
 console.log('----------');
 {
-    console.log("Keyboard Events & Keyboard Events Properties");
+    console.log('Keyboard Events & Keyboard Events Properties');
 
     document.addEventListener('keypress', function () {
-        console.log("You pressed a key, Thanks!");
+        console.log('You pressed a key, Thanks!');
     });
 
     document.addEventListener('keydown', function () {
@@ -281,7 +281,7 @@ console.log('----------');
 }
 console.log('----------');
 {
-    console.log("Keyboard Events & Keyboard Events Properties 2");
+    console.log('Keyboard Events & Keyboard Events Properties 2');
 
     // Pass an event through to a listener
     document.addEventListener('keydown', function () {
@@ -301,11 +301,33 @@ console.log('----------');
 }
 console.log('----------');
 {
+    console.log('Create dropdown list using JavaScript');
+
+    function myDropbox() {
+        let myList = document.getElementById('myList');
+        document.getElementById('favourite').value = myList.options[myList.selectedIndex].text;
+    }
 
 }
 console.log('----------');
 {
+    console.log('Selecting all checkboxes in a JavaScript');
 
+    function selectAll() {
+        let ele = document.getElementsByName('chk');
+        for (let i = 0; i < ele.length; i++) {
+            if (ele[i].type === 'checkbox')
+                ele[i].checked = true;
+        }
+    }
+
+    function deSelectAll() {
+        let ele = document.getElementsByName('chk');
+        for (let i = 0; i < ele.length; i++) {
+            if (ele[i].type === 'checkbox')
+                ele[i].checked = false;
+        }
+    }
 }
 console.log('----------');
 {

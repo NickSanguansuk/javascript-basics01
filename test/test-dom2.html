@@ -146,6 +146,34 @@
                 <button id='KeyS'>DOWN</button>
             </div>
         </div>
+        <div>
+            <h1>Create dropdown list using JavaScript</h1>
+            <form>
+                <b> Select you favourite location for vacation</b>
+                <select id="myList" onchange="myDropbox()">
+                    <option> ---Choose Location---</option>
+                    <option> Florida</option>
+                    <option> New York</option>
+                    <option> Hollywood</option>
+                    <option> Texas</option>
+                </select>
+                <label>
+                    Your selected location site is:
+                    <input type="text" id="favourite" size="20">
+                </label>
+            </form>
+        </div>
+        <div>
+            <h1>Selecting all checkboxes in a JavaScript</h1>
+            <h3>Select or Deselect all or some checkboxes as per your mood:</h3>
+            <input type="checkbox" name="chk" value="Smile">Smile<br>
+            <input type="checkbox" name="chk" value="Cry">Cry<br>
+            <input type="checkbox" name="chk" value="Laugh">Laugh<br>
+            <input type="checkbox" name="chk" value="Angry">Angry<br>
+            <br>
+            <input type="button" onclick='selectAll()' value="Select All"/>
+            <input type="button" onclick='deSelectAll()' value="Deselect All"/>
+        </div>
     </section>
 </main>
 <footer>
